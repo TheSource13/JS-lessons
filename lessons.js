@@ -126,3 +126,249 @@ else
     
     }
 
+
+
+    // lesson 4
+
+    //  function declaration
+
+    myFirstFunction();
+    myFirstFunction();
+    myFirstFunction();
+    myFirstFunction();
+    myFirstFunction();
+
+    function myFirstFunction(){
+
+      console.log('Hello World');
+
+    } 
+
+    myFirstFunction();
+
+
+    function myFirstFunction(name, place){
+          
+      console.log('Hello ' + place +' My name is ' + name);
+    }
+
+    myFirstFunction('Nick', 'World');
+
+
+    function myFirstFunction(name, place){
+          
+      console.log('Hello ' + place +' My name is ' + name);
+    }
+
+    myFirstFunction();
+
+    function myFirstFunction(name, place){
+          
+      console.log('Hello ' + place +' My name is ' + name);
+    }
+
+    myFirstFunction('Nick');
+
+
+   var phrase = myFirstFunction('Nick' , 'World');
+      console.log(phrase);
+
+    function myFirstFunction(name, place){
+          
+    return('Hello ' + place +' My name is ' + name);
+    }
+
+
+    var phrase = myFirstFunction('Nick' , 'World');
+      console.log(phrase);
+
+    function myFirstFunction(name, place){
+          
+    ('Hello ' + place +' My name is ' + name);
+    }
+
+
+
+
+    var k = 'This is global function';
+    var phrase = myFirstFunction('Nick' , 'World');
+    console.log(phrase);
+     console.log(k);
+
+     function myFirstFunction(name, place){
+         k = 'This is local function';
+         
+        console.log(k);
+       return('Hello ' + place +' My name is ' + name);
+  }
+
+
+  // fn.expression
+  var  functionExpressoin= function(name){
+           return('Hello ' + name);
+
+  }
+
+  console.log(functionExpressoin('Nick'));
+    
+
+  
+  var  functionExpressoin= function(name){
+    return('Hello ' + name);
+
+}
+var rezult = functionExpressoin('Nick');
+
+// function parameters
+
+
+// рекрсия
+
+function forFn(max){
+  if(max < 0){
+    return
+  };
+console.log(max);
+forFn(max - 1);
+
+}
+
+forFn(10);
+
+
+for(var i = 0 ;  i < 10 ;  i++);
+console.log(i);
+
+function forFn(max){
+  if(max > 10){
+    return
+  };
+  if(max < 0){
+    return
+  };
+console.log(max);
+forFn(max + 1);
+
+}
+
+forFn(1);
+// 2 решение
+
+function forFn(max, start = 0){
+  if(start === max){
+return
+};
+  console.log(start);
+  forFn(max, start + 1);
+
+}
+forFn(10);
+
+// факториал
+
+function factorial(n){
+  if (n < 0){
+    return 'invalid Pararmetr';
+  }
+  var factorial = 1;
+
+    for(var i = 1; i <= n ; i++){
+      factorial = factorial * i;  
+       }
+       return factorial
+    }
+console.log(factorial(5));
+
+
+function factorial(n){
+
+  if (n < 0) {
+    return 'invalid Pararmeter'
+  }
+
+   var factorial = 1;
+    for(var i = 1; i<= n; i++) {
+      factorial = factorial * i;
+    }
+    return factorial
+
+}
+
+console.log(factorial(5));
+
+
+
+// Коля решает
+
+function factorial(n){
+  
+  if (n === 0){
+     return 1;
+}
+    return n * factorial(n-1);
+  
+   
+
+}
+
+console.log(factorial(5));
+
+
+function factorial(n){
+  if(n !== "number"){
+    return "Bad data";
+  }
+   
+  if (n === 0){
+     return 1;
+}
+    return n * factorial(n-1);
+  
+   
+
+} 
+
+console.log(factorial(5));
+
+
+
+
+function getNumLine(n)
+{
+    if (n == 0) return n;
+    else 
+    
+       return getNumLine(n - 1) + "," + n;
+}
+
+
+console.log(getNumLine(5));
+
+// Задание 1. Функция принимает число n(проверить что n является числом в противном случае завершить работу функции).
+//  Функция возвращает строку чисел от 1 до n через разделитель ','. 
+//  Если число меньше 1 то выдается строка (например n = -2 строка должна быть '1,0,-1,-2').
+
+/**
+ * Build string from numbers from 1 to n
+ * @param {number} input
+ * @returns {string} Returns the string from 1 to input.
+ */
+function stringBuilder(input) {
+    if(typeof input !=='number'){
+      return ;
+    }
+    
+    else
+      if(input >= 0)
+     return stringBuilder(input - 1) + ',' + input;
+
+     else 
+       if(input < 0) 
+        return stringBuilder(input - 1) + ',' + input;
+
+   
+};
+ 
+console.log(stringBuilder(-5));
+ 
+module.exports = stringBuilder;
