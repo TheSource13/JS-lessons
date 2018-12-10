@@ -372,3 +372,12 @@ function stringBuilder(input) {
 console.log(stringBuilder(-5));
  
 module.exports = stringBuilder;
+
+
+console.log(typeof object)
+
+var i = 0;
+while (i < 3) {
+  console.log( i );
+  i++;
+}
