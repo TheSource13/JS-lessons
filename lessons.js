@@ -355,22 +355,21 @@ console.log(getNumLine(5));
  */
 function stringBuilder(input) {
     if(typeof input !=='number'){
-      return ;
+      return 'NaN';
     }
     
     else
-      if(input >= 0)
-     return stringBuilder(input - 1) + ',' + input;
+      if(input >= 1){
+     return stringBuilder(input - 1) + ',';}
 
      else 
-       if(input < 0) 
-        return stringBuilder(input - 1) + ',' + input;
+       if(input < 1){ 
+        return stringBuilder(input - 1) + ',' + input;}
 
    
 };
- 
-console.log(stringBuilder(-5));
- 
+
+stringBuilder("l")
 module.exports = stringBuilder;
 
 
@@ -381,3 +380,88 @@ while (i < 3) {
   console.log( i );
   i++;
 }
+
+function my_function(n) {
+  if (n<=1) return n;
+   else
+  return my_function(n-1)+" "+n;
+}
+ var n = 6;
+console.log(my_function(6)) ;
+
+function getNumLine(n)
+{
+    if (n == 0) return n;
+    else 
+    
+       return getNumLine(n - 1) + "," + n;
+}
+
+
+getNumLine(5);
+
+function my_function(n) {
+  if (n<1) return n;
+   else
+  return  my_function(n-1)+ " " + n;
+}
+
+console.log(my_function(5)) ;
+
+
+
+
+function my_function(n) { 
+   if (n>1)
+  return  my_function(n-1)+ " " + n;
+  else
+  if (n<1) return my_function(n+1) + ' ' + n;
+}
+
+console.log(my_function(-5)) ;
+
+
+function my_function(n) { 
+   if (n>=1)
+  return  my_function(n-1)+ " " + n;
+  else
+  if (n<1) return my_function(n+1) + ' ' + n;
+}
+
+console.log(my_function(-5)) ;
+
+// общий знаменатель
+const commonDevisor = ( num1, num2) => {
+
+ if (num2 == 0){
+   return num1;
+ }
+   return commonDevisor(num2, num1%num2);
+
+   }
+
+   console.log(commonDevisor(100, 45));
+  
+  // без рекурсии
+   const gcd_2 = ( a, b) => {
+    var t;
+    while (b != 0) {
+      t = b;
+      b = a % b;
+      a = t;
+    }
+    return a;
+  }
+
+  console.log(gcd_2(100,45));
+
+
+  const commonDevisor = (num1, num2) => {
+    if (!num2) {
+        return num1;
+    }
+    return commonDevisor(num2, num1 % num2);
+};
+
+console.log(commonDevisor(100,45));
+module.exports = commonDevisor;
