@@ -466,3 +466,75 @@ const commonDevisor = ( num1, num2) => {
 console.log(commonDevisor(100,45));
 module.exports = commonDevisor;
 
+
+let str = 'Nick';
+
+console.log('My name is  ' + str);
+
+let str1 = 'Nick';
+let str2 = 'Vova';
+let str3 = 'Petya';
+let str4 = 'Gena';
+let str5 = 'Alex';
+
+console.log(`Our names is ${str1} ${str2} ${str3} ${str4} ${str5}`);
+
+let str1 = 'Nick';
+let str2 = 'Vova';
+let str3 = 'Petya';
+let str4 = 'Gena';
+let str5 = 'Alex';
+let arrStr='12,13,14,23,15, 16?, y , -=';
+console.log('Hello. \n I\'m Nick');
+
+console.log(str1. toUpperCase());
+console.log(str1. toLocaleLowerCase());
+console.log(arrStr. slice(4,6));
+console.log(arrStr. indexOf('23'));
+console.log(arrStr.endsWith('y'));
+
+
+let pattern
+
+let regex = /abc/g;
+console.log('abcdef'. match(regex));
+
+let rudeWold = 'fuck';
+let rudeWorld = new RegExp('fuck', 'gi');
+let chat = 'fuck you fucking fuck';
+console.log(chat.toLowerCase().replace(rudeWorld, 'honey'));
+
+
+let report = 'I pay 12 dollars for to candies'
+let digit = /\d/g;
+console.log(report.replace(digit, '*'));
+
+let report = 'I pay 12 dollars for to candies'
+let digit = /\d+ dollars/g;
+console.log(report.replace(digit, '* dollars'));
+
+let report = 'I    give    you     all my  money';
+let digit = /\s+ /g;
+console.log(report.replace(digit, ' '));
+
+let naming = /^my name is (\w)+.$/gi;
+let greet = 'My name is Nick.';
+console.log(greet.match(naming));
+
+
+
+
+let name = 'gen_k_777@mail.ru';
+let pattern =/'[a-z0-9][\_|\-]?[a-z0-9][\_|\-]?[a-z0-9]@[a-z][\.](com)'/;
+console.log(pattern.test(name));
+
+
+
+
+
+
+
+
+
+
+
