@@ -94,11 +94,12 @@ function factorial(n){
   console.log(factorial(5));
 
 
-  function factorial(n){
-    for( i = 0; i<=n; i++)
-    // if (n === 0)
-    //     return 1;    
-     return  n * factorial(i+1);   
-     
-  }
-    console.log(factorial(5));
+//   function factorial(n){
+//     for(var  i = 0; i<=n; i++)
+//     if (n === 0)
+//         return 1;    
+//      return  i * (i+1);   
+//   }
+//     console.log(factorial(5));
+
+
