@@ -21,16 +21,18 @@ var superFn = function (sum1,sum2, fn){
 'use strict'
 var a = 4;
 var b = function() {
-      a = 42;
-   // console.log('local b= ' + a);
+    console.log('local b= ' + a);
+    let  a = 42;
+   
     return function (a){
-          kk = 44;
+        //   kk = 44;
       a = 145;
        // console.log('local c = ' + a);
     }
 }
-fn()
+
 var c = b();
+console.log(a);
 c();
 console.log('globe a = ' + a);
 
@@ -40,21 +42,20 @@ console.log('globe a = ' + a);
 var b = function() {
    var a = 42;
       return function (){
-       a = a + 1;
+         return a = a + 1;
     
   }
 }
 
 var c = b();
-c();
-console.log(a);
+console.log(c());
 
 
 'use strict'
 var a = 1;
 var b = function() {
       a = 2;
-   // console.log('local b= ' + a);
+   console.log('local b= ' + a);
     return function (){
            a = 3;
        return function(){
@@ -70,6 +71,11 @@ d();
 console.log('globe a = ' + a);
 
 
+
+
+
+
+   
 
 
 
