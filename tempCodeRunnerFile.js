@@ -1,8 +1,7 @@
-
-var arr = [[1, 2, 3,  4], [4, 5, 6], [7, 8, 9]];
-for (var i = 0; i < arr.length; i++) {
-    for (var j = 0; j < arr[i].length; j++) {
-        console.log(arr[i][j]);
-    }
-
-}
+var arrAlph = ['z', 'k', 'g', 'a', 'r', 'p', 'o', 'w'];
+var new1 = arrAlph.sort(function(item1,item2){
+    var rez = item1 > item2;
+    return rez ? 1 : -1;
+    
+});
+console.log(new1);

@@ -204,6 +204,146 @@ console.log(arr);
 
 
 
+// выдача всех значений переданных в arr(forEach) 
+
+var arr = [45, 56, 6, -8, 345, 88, 11, 5 , 89, 0, -100 ];
+
+var cb = function(item){
+     console.log(item);
+}
+
+arr.forEach(cb);
+
+
+// Map метод
+var arr = [45, 56, 6, -8, 345, 88, 11, 5 , 89, 0, -100 ];
+var newArr = arr.map(function(item){
+    return item * 2;
+})
+
+console.log(newArr);
+
+// toString
+
+var arr = [45, '56','fuck', 6, -8, 345, 88, 11, 5 , 89, 0, -100 ];
+var newArr = arr.map(function(item){
+    return item.toString();
+})
+
+console.log(newArr);
+
+
+// Filter
+
+var arr = [45, '56','fuck', 6, -8, 345, 88, 11, 5 , 89, 0, -100 ];
+var newArr2 = arr.filter(function(item){
+    return typeof item === 'number';
+})
+console.log(newArr2);
+
+
+// возвращает все числовые значения, даже строки
+var arr = [45, '56','fuck', 6, -8, 345, 88, 11, 5 , 89, 0, -100 ];
+var newArr2 = arr.filter(function(item){
+    return !isNaN(+item);
+    
+})
+console.log(newArr2);
+
+
+var arr = [45, '56','fuck', 6, -8, 345.45, 88, 11, 5 , 89, 0, -100 ];
+var newArr2 = arr
+.filter(function(item){
+    return !isNaN(+item);
+    
+})
+.map(function(item){
+    return +item;
+
+})
+.filter(function(item){
+    return Number.isInteger(item);
+})
+.filter(function(item){
+    return !(item%2);
+})
+.filter(function(item){
+    return item>0;
+})
+console.log(newArr2);
+
+
+
+
+// Сумма элементов массива
+var arr = [45, '56','fuck', 6, -8, 345.45, 88, 11, 5 , 89, 0, -100 ];
+var sum = 0;
+var newArr3 = arr
+.filter(function(item){
+   return !isNaN(+item)
+})
+.map(function(item){
+    return +item;
+})
+.forEach(function(item){
+    sum += +item;
+})
+console.log(sum);
+
+
+
+// метод reduce
+var arr = [45, '56','fuck', 6, -8, 345.45, 88, 11, 5 , 89, 0, -100 ];
+var newArr3 = arr.reduce(function(acc, item){
+      acc += !isNaN(+item) ? +item : 0 ;
+       return acc;
+}, 0);
+
+console.log(newArr3);
+
+
+
+var arr = [45, '56','fuck', 6, -8, 345.45, 88, 11, 5 , 89, 0, -100 ];
+var newArr3 = arr.reduce(function(acc, item){
+      if(!isNaN(+item) && Number.isInteger(+item) && !(+item%2)){
+          acc.push (+item);
+      }
+
+
+      return acc;
+}, []);
+
+console.log(newArr3);
+
+
+
+
+// Sort метод
+
+var arr2 = [45, 56, 6, -8, 345.45, 88, 11, 5 , 89, 0, -100 ];
+var arr3 = arr2.sort(function(item1, item2){
+     
+    return item2 - item1;
+});
+
+console.log(arr3);
+
+
+var arrAlph = ['z', 'k', 'g', 'a', 'r', 'p', 'o', 'w'];
+var new1 = arrAlph.sort(function(item1,item2){
+    var rez = item1 > item2;
+    return rez ? 1 : -1;
+    
+});
+console.log(new1);
+
+
+
+
+
+
+
+
 
 
 
