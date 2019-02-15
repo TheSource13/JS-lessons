@@ -1,7 +1,14 @@
-var arrAlph = ['z', 'k', 'g', 'a', 'r', 'p', 'o', 'w'];
-var new1 = arrAlph.sort(function(item1,item2){
-    var rez = item1 > item2;
-    return rez ? 1 : -1;
+var multi = [
+        [7,2,3],
+        [1,2,3],
+        [3,2,4]
+    ];
+        
+    var sum = 0;
     
-});
-console.log(new1);
+    for(var k = multi.length - 1; k >= 0 ; k--){
+      sum = sum + multi[multi.length - 1 - k][k];
+      console.log(multi[multi.length - 1 - k][k]);
+    }
+    
+    console.log(sum);

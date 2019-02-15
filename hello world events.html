@@ -1,0 +1,47 @@
+<html>
+<head> <title>Hello world</title> 
+</head>
+<body>
+    <div id="firstDiv">
+        <div id="secondDiv">
+            <span id="span">
+                    <button id="btn">CLick me</button>
+                    <button id="btn2">CLick me Hard</button>
+            </span>
+        </div>
+    </div>
+    
+    <script>
+            const cb = () => {
+                console.log('This is the end!!!');
+            };
+
+            window.addEventListener('click', cb); 
+
+            firstDiv.addEventListener('click', () => {
+                console.log('This is a div1!!!');
+            }); 
+
+            btn2.addEventListener('click', () => {
+                console.log('Ohhhh boy!') ;
+                window.removeEventListener('click', cb )
+            })
+
+            btn.onclick = function (event){
+                console.log(event);
+                console.log('Hello people!!!');};
+
+            span.addEventListener('click', function(){
+                console.log('This is a span!!!');
+            });    
+            
+            secondDiv.addEventListener('click', () => {
+                console.log('This is a div2!!!');
+            });   
+
+          
+
+           
+    </script>
+</body>
+</html>

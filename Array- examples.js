@@ -78,7 +78,7 @@ for (var i = 0; i < arr.length; i++) {
 
     console.log(sum); 
 
-    //сумма  элементов многомерного массива по диагонали
+    //сумма  элементов многомерного массива по диагонали слева на право
     var arr1 = [1,2,3,4,5,6,7,8,9,0];
     var arr2 = [1,2,3,4,5,6,7,8,9,0,12];
     var arr3 = [1,2,3,4,5,6,7,8,9,0,13,14];
@@ -100,6 +100,41 @@ for (var i = 0; i < arr.length; i++) {
     }
     
     console.log(sum); 
+
+    // сумма  элементов многомерного массива по диагонали справа на лево
+
+    var multi = [
+        [1,2,3],
+        [1,2,3],
+        [8,2,4]
+        ];
+    var sum = 0;
+    var i = multi.length-1;
+    for(var k=0;  k < multi.length; k++){        
+            sum += multi[k][i]; 
+            console.log(multi[k][i]);
+            i--
+    }
+
+    console.log('= ' + sum);
+
+    // сумма элементов по диагонали без цикла в цикле 
+    var multi = [
+        [7,2,3],
+        [1,2,3],
+        [3,2,4]
+    ];
+        
+    var sum = 0;
+    
+    for(var k = multi.length - 1; k >= 0 ; k--){
+      sum = sum + multi[multi.length - 1 - k][k];
+      console.log(multi[multi.length - 1 - k][k]);
+    }
+    
+    console.log(sum);
+
+
 
 
     // вывести максимальное значение в массиве
