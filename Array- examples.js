@@ -391,6 +391,55 @@ var arr = [38,56,7,12,11,90,77,42,23,13,56,17];
    console.log(max(arr));
 
 
+   
+// найти ропущенное число
+
+function findMissingNumber(inputAr) {
+    // Sort array
+
+    var inputAr = [1, 3, 6, 4, 1, 2];
+    function sortArray(inputAr) {
+        var temp;
+        for (var i = 0; i < inputAr.length; i++) {
+          for (var j = i + 1; j < inputAr.length; j++) {
+            if (inputAr[j] < inputAr[i]) {
+              temp = inputAr[j];
+              inputAr[j] = inputAr[i];
+              inputAr[i] = temp;
+            }
+          }
+        }
+      }
+      
+    sortArray(inputAr);
+    // console.log(inputAr);
+  
+
+    // finding missing number here
+    var result = 0;
+    if (inputAr[0] > 1 || inputAr[inputAr.length - 1] < 1) {
+      result = 1;
+    } else {
+      for (var i = 0; i < inputAr.length; i++) {
+        if ((inputAr[i + 1] - inputAr[i]) > 1) {
+          result = inputAr[i] + 1;
+        }
+      }
+    }
+    if (!result) {
+      result = inputAr[inputAr.length - 1] + 1;
+      
+    }
+    return result;
+  }
+  
+
+  console.log(findMissingNumber([1, 3, 6, 4, 1, 2]));
+  console.log(findMissingNumber([1, 2, 3]));
+  console.log(findMissingNumber([85]));
+  console.log(findMissingNumber([86, 85]));
+  console.log(findMissingNumber([0, 1000]));
+
 
 
 
