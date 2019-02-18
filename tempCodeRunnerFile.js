@@ -1,14 +1,15 @@
-var multi = [
-        [7,2,3],
-        [1,2,3],
-        [3,2,4]
-    ];
-        
-    var sum = 0;
-    
-    for(var k = multi.length - 1; k >= 0 ; k--){
-      sum = sum + multi[multi.length - 1 - k][k];
-      console.log(multi[multi.length - 1 - k][k]);
+var arr = [
+    'jjflsdfj',
+    'madam',
+    'volov',
+    'eporiw'];
+function isPal(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === arr[i].split('').reverse().join('')) {
+            console.log(arr[i]);
+
+        }
     }
-    
-    console.log(sum);
+}
+
+isPal(arr);

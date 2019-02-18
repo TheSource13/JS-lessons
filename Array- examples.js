@@ -127,7 +127,7 @@ for (var i = 0; i < arr.length; i++) {
         
     var sum = 0;
     
-    for(var k = multi.length - 1; k >= 0 ; k--){
+    for(var k = multi.length - 1; k >= 0 ; k--){ 
       sum = sum + multi[multi.length - 1 - k][k];
       console.log(multi[multi.length - 1 - k][k]);
     }
@@ -171,7 +171,9 @@ for (var i = 0; i < arr.length; i++) {
      }
      return {vmax: vmax , index : index};
  }
- 
+
+
+ var arr = [38,56,7,12,11,90,77,42,23,13,56,17];
  function sort(arr){
     var temp;
      for(var i = 0; i < arr.length; i++){
@@ -186,7 +188,7 @@ for (var i = 0; i < arr.length; i++) {
     }
 }
 sort(arr);
-console.log(arr);
+console.log([38,56,7,12,11,90,77,42,23,13,56,17]);
 
 // сортировка методом бульбашка
 
@@ -371,6 +373,22 @@ var new1 = arrAlph.sort(function(item1,item2){
     
 });
 console.log(new1);
+
+// вывести макс значение в массиве
+
+var arr = [38,56,7,12,11,90,77,42,23,13,56,17];
+   function max(arr){
+       var vmax = arr[0];
+       for (var i = 1; i < arr.length; i++){
+           if(vmax < arr[i]){
+               vmax = arr[i];
+           }
+           
+       }
+       return vmax ;
+   }
+
+   console.log(max(arr));
 
 
 
