@@ -47,7 +47,7 @@ function isPal(str) {
 }
 
 
-var array = str.split(/\d*/);
+var array = str.split(/\w*/);
 console.log(array);
 
 
