@@ -64,7 +64,7 @@ for(var k in arr){
 }
 
 var arr = [1,2,3,4,5,6,7,8,9,0,10];
-// arr[100] = 100500;
+arr[100] = 100500;
 
 for(var k of arr){
    console.log(arr[k]);
@@ -105,3 +105,4 @@ function fn(){
 };
 
 console.log(fn('hello','buy', 'call', 'please', 'plesure'));
+
